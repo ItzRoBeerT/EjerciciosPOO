@@ -14,4 +14,6 @@ banco = Banco(clientes)
 
 print(banco)
 
+banco.operar()
+
 

@@ -20,11 +20,11 @@ class Cliente:
     def cantidad(self, valor):
         self.__cantidad = valor
 
-    def depositar(self, cantidad):
-        self.__cantidad += cantidad
+    def depositar(self, cantidad:float):
+        self.__cantidad += float(cantidad)
 
-    def retirar(self, cantidad):
-        self.__cantidad -= cantidad
+    def retirar(self, cantidad:float):
+        self.__cantidad -= float(cantidad)
 
 
     def __str__(self):

@@ -12,6 +12,20 @@ class Banco:
 
     def operar(self):
         #TODO
+        nombreCli: str= input("Inserte nombre del cliente: ")
+        for cli in self.__clientes:
+            if nombreCli == cli.nombre:
+                miCli = cli
+                print("Bienvenido "+miCli.nombre+ "!")
+                respuesta1 = input("Desea ingresar? (s/n)")
+                if respuesta1.__eq__("s"):
+                    cantidad:float = input("Inserte cantidad");
+                    miCli.depositar(cantidad)
+                respuesta2 = input("Desea retirar? (s/n)")
+                if respuesta2.__eq__("s"):
+                    cantidad: float = input("Inserte cantidad");
+                    miCli.retirar(cantidad)
+                print(miCli)
         return 0
 
     def __str__(self):
